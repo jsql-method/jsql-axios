@@ -1,8 +1,6 @@
 /*
- * jsql
- *
- * Copyright (c) 2018 JSQL
- * Licensed under the ISC license.
+ * Copyright (c) 2017-2019 JSQL Sp. z.o.o. (Ltd, LLC) www.jsql.it
+ * See LICENSE or https://jsql.it/public-packages-license
  */
 
 'use strict';
@@ -13,21 +11,20 @@ module.exports = function (grunt) {
 
         clean: {
             files: ['dist'],
-            publish: ['dist/jsql-axios-plugin.js']
-         },
-
+            publish: ['dist/jsql-axios.js']
+        },
 
         concat: {
             options: {
                 separator: ';'
             },
             dist: {
-                src: ['node_modules/jsql-core/jsql-core.min.js', 'src/jsql-axios-plugin.js'],
-                dest: 'dist/jsql-axios-plugin.js'
+                src: ['node_modules/jsql-core/jsql-core.min.js', 'src/jsql-axios.js'],
+                dest: 'dist/jsql-axios.js'
             },
             local: {
-                src: ['../jsql-js-core/dist/jsql-core.min.js', 'src/jsql-axios-plugin.js'],
-                dest: 'dist/jsql-axios-plugin.js'
+                src: ['../jsql-js-core/dist/jsql-core.js', 'src/jsql-axios.js'],
+                dest: 'dist/jsql-axios.js'
             }
         },
 
@@ -37,11 +34,10 @@ module.exports = function (grunt) {
             },
             target: {
                 files: {
-                    'dist/jsql-axios-plugin.min.js': ['dist/jsql-axios-plugin.js']
+                    'dist/jsql-axios.min.js': ['dist/jsql-axios.js']
                 }
             }
         },
-
 
         copy: {
 
@@ -51,7 +47,7 @@ module.exports = function (grunt) {
                     {
                         expand: true,
                         cwd: '.',
-                        src: ['isc.md', 'package.json'],
+                        src: ['LICENSE.md', 'package.json'],
                         dest: './dist'
                     }
                 ]
@@ -63,11 +59,11 @@ module.exports = function (grunt) {
     });
 
     grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-uglify-es');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-contrib-uglify-es');
 
     grunt.registerTask('dev', ['concat:local']);
-    grunt.registerTask('default', ['concat:dist', 'copy', 'uglify', 'clean:publish']);
+    grunt.registerTask('default', ['clean', 'copy', 'concat:dist', 'uglify', 'clean:publish']);
 
 };

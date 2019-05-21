@@ -1,34 +1,32 @@
 {
-  "name": "jsql-axios-plugin",
-  "version": "0.1.1",
-  "description": "React and Vue plugin with Axios library to change sql queries to hash for JSQL.",
-  "main": "jsql-axios-plugin.min.js",
+  "name": "jsql-axios",
+  "version": "0.4.0",
+  "description": "JSQL plugin for Axios",
+  "main": "jsql-axios.min.js",
   "keywords": [
     "jsql-axios",
     "jsql",
     "jsql-it",
-    "jsql-optimization",
-    "jsql-axios-plugin"
+    "jsql-optimization"
   ],
-  "homepage": "http://jsql.it",
+  "homepage": "https://jsql.it",
   "author": "JSQL",
-  "license": "ISC",
+  "licenses": [
+    {
+      "type": "LicenseRef-LICENSE",
+      "url": "https://jsql.it/public-packages-license"
+    }
+  ],
   "dependencies": {
-    "axios": "^0.18.0",
-    "jsql-core": "^1.1.7",
-    "npm-jsql": "latest"
+    "axios": "latest",
+    "jsql-core": "latest"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  },
+  "scripts": {},
   "devDependencies": {
     "grunt": "^1.0.3",
     "grunt-contrib-clean": "^2.0.0",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-uglify-es": "^3.3.0"
+    "grunt-contrib-uglify-es": "github:gruntjs/grunt-contrib-uglify#harmony"
   }
 }
