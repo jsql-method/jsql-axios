@@ -14,10 +14,8 @@ ECHO Po wcisnieciu enter zmiany beda publikowane w rejestrze NPM
 ECHO.
 pause >nul
 ECHO Zmiany sa teraz publikowane w rejestrze NPM
-CALL npm install
-CALL rmdir node_modules\jsql-core /s /q
-CALL npm install jsql-core
-CALL grunt && cd dist
+CALL build.bat
+CALL cd dist
 CALL npm publish --access public
 
 REM wylogowuje ############################################################
