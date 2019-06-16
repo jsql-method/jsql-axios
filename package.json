@@ -19,7 +19,7 @@
   ],
   "dependencies": {
     "axios": "0.18.0",
-    "jsql-core": "latest"
+    "jsql-core": "^1.6.0"
   },
   "scripts": {},
   "devDependencies": {
