@@ -1,6 +1,6 @@
 {
   "name": "jsql-axios",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "JSQL plugin for Axios",
   "main": "jsql-axios.min.js",
   "keywords": [
