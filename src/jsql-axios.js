@@ -46,8 +46,6 @@ export default function JsqlService(config) {
 
     this.__jsqlInstance = new window.JSQL(config);
 
-}
-
-JsqlService.prototype.getInstance = function () {
     return this.__jsqlInstance;
-};
+
+}
