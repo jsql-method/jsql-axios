@@ -1,6 +1,6 @@
 {
   "name": "jsql-axios",
-  "version": "0.8.0",
+  "version": "1.1.0",
   "description": "JSQL plugin for Axios",
   "main": "jsql-axios.min.js",
   "keywords": [
@@ -19,7 +19,7 @@
   ],
   "dependencies": {
     "axios": "0.18.0",
-    "jsql-core": "^1.6.0"
+    "jsql-core": "^2.1.0"
   },
   "scripts": {},
   "devDependencies": {
